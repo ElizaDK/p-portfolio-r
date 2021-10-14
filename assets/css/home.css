@@ -1,0 +1,151 @@
+.home{
+    padding: 0;
+    position: relative;
+}
+.home .slide-container .slide{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 9%;
+    padding-top: 9rem;
+}
+
+
+
+
+/*EFEITO NO SLIDE texto esquerdo */
+.home .slide-container .slide .content{
+    flex: 1 1 40rem;
+    animation: slideContent .5s linear 1s backwards;
+}
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+}
+/*END EFEITO NO SLIDE */
+
+
+
+
+.home .slide-container .slide .image{
+    flex: 1 1 50rem;
+    padding-bottom: 15rem;
+    position: relative;
+    z-index: 0;
+}
+
+
+/*EFEITO NO SLIDE site*/
+.home .slide-container .slide .image .shoe{
+    width: 100%;
+    transform: rotate(-15deg); /*gira no angulo de 15*/
+    animation: shoe .3s linear;
+}
+@keyframes shoe{
+    0%{
+        transform: rotate(0deg) scale(.5);
+    }
+}
+
+
+
+.home .slide-container .slide .image .text{
+    position: absolute; /*texto ficar absoluto em relacao ao site*/
+    top: 0;
+    left: 0;
+    z-index: -1;/*atras do site*/
+    animation: shoetext .5s linear .5s backwards;
+    height: 70%;
+}
+@keyframes  shoetext{
+    0%{
+        opacity: 0;
+        top:-10rem;
+    }
+}
+
+/*end EFEITO NO SLIDE */
+
+
+
+
+.home .slide-container .slide .content span{
+    font-size: 2rem;
+    color: var(--color-greenish);
+}
+.home .slide-container .slide .content h3{
+    font-size: 5rem;
+    color: var(--color-black);
+}
+.home .slide-container .slide .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: .5rem 0;
+}
+.home .slide-container .slide .content .btn{
+    font-size: 2rem;
+    
+}
+
+/*CONFIGURAÇÃO BACKGROUND DOS SLIDES*/
+.home .slide-container:nth-child(1) .slide{
+    background: url(../img/home-bg-3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-container:nth-child(2) .slide{
+    background: url(../img/home-bg-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-container:nth-child(3) .slide{
+    background: url(../img/home-bg-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-container:nth-child(4) .slide{
+    background: url(../img/home-bg-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-container{
+    display: none;
+}
+
+.home .slide-container.active{
+    display: block;
+}
+
+
+/*CONFIGURAÇÃO DOS PASSADORES*/
+
+.home #prev, .home #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 100;
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: var(--color-black);
+    border: .2rem solid var(--color-black);
+    cursor: pointer;
+    text-align: center;
+    
+}
+.home #prev:hover, .home #next:hover{
+  color: #fff;
+  background: var(--color-greenish);
+}
+.home #prev{
+    left: 3rem;
+}
+.home #next{
+    right: 3rem;
+}

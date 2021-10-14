@@ -1,0 +1,96 @@
+/*CONFIGURACOES HOME - (mobile)  */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem ;
+    }
+}
+
+/*CONFIGURACOES HEADER - #menu-bar (mobile)  */
+
+@media (max-width:768px){
+    #menu-bar{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: -120%;/*escondendo o menu*/
+        right: 0;
+        width: 100%;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0,0,0,0.1);
+}
+
+    header .navbar a{
+       font-size: 2rem;
+       background: #fff;
+       border: .1rem solid var(--color-black);
+       border-radius: .5rem;
+       padding: 1.5rem;
+       margin: 1.5rem;
+       display: block;
+       text-align: center;
+    }
+    /*classe active regra javascript*/
+    header .navbar.active{ 
+        left:0;
+    }
+    /*END classe active regra javascript*/
+
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .1rem solid rgba(0,0,0,0.1);
+        border-left: .5rem solid -var(--red);
+        background: #fff;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        display:50%;
+    }
+    .home .slide-container .slide .image{
+        padding-bottom: 6rem;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .home .slide-container .slide .image .shoe{
+        width: 100%;
+        
+    }
+    .home .slide-container .slide .image .text{
+        width: 70%;
+    }
+    .home #prev, .home #next {
+        position: absolute;
+        top: 60%;
+    }
+
+}
+
+
+
+
+@media (max-width:400px){
+    html{
+        display:50%;
+    }
+    .home .slide-container .slide .image{
+        padding-bottom: 6rem;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+}
+
+
